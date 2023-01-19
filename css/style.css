@@ -1,0 +1,233 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    margin: auto;
+    width: 85%;
+    padding: 30px 0px;
+}
+
+.home-header-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.home-header-desc {
+    display: flex;
+    align-items: baseline;
+    margin: 30px 0px;
+    gap: 10px;
+    width: 50%;
+}
+
+.home-header-desc p {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.home-header-image img {
+    width: 100%;
+}
+
+.ingredients {
+    display: flex;
+    padding: 20px 5px;
+    gap: 80px;
+    margin-top: 30px;
+
+}
+
+/*==================================
+start Ingredients details
+================================ */
+.ingredients-details {
+    flex: 1 1 75%;
+}
+
+.details-box {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.details-box.mb-30 {
+    margin-bottom: 30px;
+}
+
+
+.ingredients-details-title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+    margin: 20px 0;
+}
+
+.ingredients-details-subtitle {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+    margin: 30px 0;
+}
+
+.box-input {
+    /* display: inline-block; */
+    width: 21px;
+    height: 21px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+}
+
+.box-input-yellow {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    background: #F2994A;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    line-height: 32px;
+}
+
+.checkbox-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333333;
+    width: 75%;
+}
+
+.checkbox-desc-big {
+    font-weight: 700;
+}
+
+/*==================================
+start Ingredients card
+================================ */
+
+.ingredients-card {
+    flex: 1 1 25%;
+}
+
+.card-items {
+    padding: 30px 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0px;
+}
+
+.card-details-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgb(189, 189, 189);
+    margin-bottom: 5px;
+}
+
+.card-details-desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgb(51, 51, 51);
+}
+
+.dining-icon,
+.card-item:first-child .card-details-desc {
+    color: rgb(242, 153, 74);
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+/*===================================
+start Media Quires && Responsive 
+===================================*/
+
+@media (max-width: 991px) {
+    .home-header-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .home-header-desc {
+        width: 100%;
+    }
+
+    .home-header-desc p {
+        font-size: 14px;
+    }
+
+    .card-item:first-child {
+        width: 100%;
+        flex: 1 1 calc(100%);
+    }
+
+    .ingredients {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .checkbox-desc {
+        width: 100%;
+    }
+
+    .card-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 20px 0;
+    }
+
+    .card-item {
+        flex: 1 1 calc(100% / 4 - 30px);
+        width: calc(100% / 4 - 30px);
+    }
+
+}
+
+@media (max-width: 500px) {
+    .card-item {
+        flex: 1 1 calc(100% / 2 - 30px);
+        width: calc(100% / 2 - 30px);
+    }
+}
